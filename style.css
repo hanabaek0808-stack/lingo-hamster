@@ -1,101 +1,1338 @@
+/* =========================================================
+   LINGO HAMSTER — COMPLETE STYLE SHEET
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET & GLOBAL SETTINGS
+   ========================================================= */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f3ff;
-    color: #29243a;
-    text-align: center;
+html {
+    scroll-behavior: smooth;
 }
 
-header {
-    padding: 30px 20px;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5ff;
+    color: #29243a;
+    line-height: 1.6;
+    min-height: 100vh;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   2. HEADER
+   ========================================================= */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 15px 5%;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    border-bottom: 1px solid #e7e3f5;
+
+    box-shadow: 0 3px 15px rgba(50, 40, 80, 0.08);
+
+    backdrop-filter: blur(10px);
 }
 
 .logo {
-    font-size: 36px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 24px;
+    font-weight: 800;
+
+    white-space: nowrap;
+
+    color: #5b3fc4;
 }
 
-.subtitle {
-    margin-top: 10px;
-    font-size: 18px;
-    color: #666;
+.main-navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
 }
 
-.language-box {
-    margin: 25px auto;
-    max-width: 500px;
-    background: white;
+.main-navigation a {
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #5a5568;
+
+    transition: color 0.2s ease;
+}
+
+.main-navigation a:hover {
+    color: #6c4ce4;
+}
+
+.icon-button {
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #eeeaff;
+
+    font-size: 20px;
+
+    transition: transform 0.2s ease,
+                background 0.2s ease;
+}
+
+.icon-button:hover {
+    transform: rotate(15deg) scale(1.05);
+    background: #ded7ff;
+}
+
+
+/* =========================================================
+   3. HERO SECTION
+   ========================================================= */
+
+.hero-section {
+    max-width: 1200px;
+
+    margin: 35px auto 0;
+
+    padding: 70px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #eeeaff,
+        #ffffff
+    );
+
+    box-shadow: 0 10px 40px rgba(60, 45, 100, 0.08);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.welcome-text {
+    color: #6c4ce4;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 7vw, 76px);
+
+    line-height: 1.05;
+
+    color: #5b3fc4;
+
+    margin-bottom: 15px;
+}
+
+.hero-content h2 {
+    font-size: clamp(20px, 3vw, 30px);
+
+    margin-bottom: 18px;
+
+    color: #353047;
+}
+
+.hero-content p {
+    max-width: 650px;
+
+    color: #666174;
+
+    font-size: 17px;
+}
+
+.hero-hamster {
+    min-width: 190px;
+
+    font-size: 150px;
+
+    text-align: center;
+
+    animation: hamsterFloat 3s ease-in-out infinite;
+}
+
+@keyframes hamsterFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================================
+   4. BUTTONS
+   ========================================================= */
+
+.primary-button {
+    border: none;
+
+    padding: 14px 26px;
+
+    margin-top: 22px;
+
+    border-radius: 14px;
+
+    background: #6c4ce4;
+
+    color: white;
+
+    font-weight: 700;
+
+    box-shadow: 0 6px 18px rgba(108, 76, 228, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.primary-button:hover {
+    background: #5939cf;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 9px 22px rgba(108, 76, 228, 0.3);
+}
+
+.primary-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   5. SECTION HEADINGS
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.section-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eeeaff;
+
+    font-size: 27px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+
+    margin-bottom: 2px;
+}
+
+.section-heading p {
+    color: #777184;
+}
+
+
+/* =========================================================
+   6. LANGUAGE SECTION
+   ========================================================= */
+
+.language-section {
+    max-width: 900px;
+
+    margin: 55px auto 30px;
+
+    padding: 0 25px;
+}
+
+.language-selector {
     padding: 25px;
+
+    background: white;
+
     border-radius: 20px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+
+    box-shadow: 0 5px 25px rgba(50, 40, 80, 0.08);
+}
+
+.language-selector label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+select,
+input {
+    border: 1px solid #ded9ed;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #302b3d;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
 }
 
 select {
     width: 100%;
+
     padding: 14px;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-    margin-top: 15px;
 }
 
-.start-button {
-    margin-top: 20px;
-    padding: 14px 30px;
-    border: none;
-    border-radius: 12px;
-    background: #6c4ce4;
-    color: white;
-    font-size: 17px;
-    cursor: pointer;
+input {
+    padding: 13px 15px;
 }
 
-.start-button:hover {
-    opacity: 0.85;
+select:focus,
+input:focus {
+    border-color: #6c4ce4;
+
+    box-shadow: 0 0 0 3px rgba(108, 76, 228, 0.12);
 }
 
-.features {
-    max-width: 900px;
-    margin: 30px auto;
+
+/* =========================================================
+   7. DASHBOARD
+   ========================================================= */
+
+.dashboard-section {
+    max-width: 1100px;
+
+    margin: 25px auto 55px;
+
+    padding: 0 25px;
+
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
     gap: 18px;
+}
+
+.dashboard-card {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
     padding: 20px;
-}
 
-.feature {
     background: white;
-    padding: 25px 15px;
+
     border-radius: 18px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
-    font-size: 18px;
-    cursor: pointer;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+
+    transition: transform 0.2s ease;
 }
 
-.feature:hover {
+.dashboard-card:hover {
     transform: translateY(-3px);
 }
 
-.progress {
-    margin: 30px auto;
-    max-width: 500px;
-    background: white;
-    padding: 25px;
-    border-radius: 20px;
+.dashboard-card > span {
+    font-size: 30px;
 }
 
-.hamster {
-    font-size: 70px;
+.dashboard-card strong {
+    display: block;
+
+    font-size: 25px;
+
+    color: #5b3fc4;
+}
+
+.dashboard-card small {
+    display: block;
+
+    color: #777184;
+}
+
+
+/* =========================================================
+   8. LEARNING SECTION
+   ========================================================= */
+
+.learning-section {
+    max-width: 1100px;
+
+    margin: 0 auto 60px;
+
+    padding: 0 25px;
+}
+
+.feature-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.feature-card,
+.practice-card {
+    border: none;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 30px 20px;
+
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.feature-card:hover,
+.practice-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 28px rgba(50, 40, 80, 0.12);
+}
+
+.feature-icon {
+    display: block;
+
+    font-size: 42px;
+
+    margin-bottom: 12px;
+}
+
+.feature-card strong,
+.practice-card strong {
+    display: block;
+
+    font-size: 18px;
+
+    margin-bottom: 5px;
+}
+
+.feature-card small,
+.practice-card small {
+    color: #777184;
+}
+
+
+/* =========================================================
+   9. GENERAL LEARNING PAGES
+   ========================================================= */
+
+.learning-page {
+    max-width: 1100px;
+
+    margin: 0 auto 70px;
+
+    padding: 35px 25px;
+
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================================================
+   10. VOCABULARY
+   ========================================================= */
+
+.vocabulary-tools {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.vocabulary-tools input {
+    width: 100%;
+}
+
+.vocabulary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.word-card {
+    padding: 22px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+}
+
+.word-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 5px;
+}
+
+.word-label {
+    font-size: 12px;
+
+    font-weight: 700;
+
+    color: #6c4ce4;
+
+    letter-spacing: 1px;
+}
+
+.word-practice-card {
+    margin-top: 30px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow: 0 5px 25px rgba(50, 40, 80, 0.08);
+}
+
+.word-practice-card h3 {
+    font-size: 40px;
+
+    color: #5b3fc4;
+
+    margin: 5px 0;
+}
+
+.word-practice-card p:not(.word-label) {
+    font-size: 22px;
+
+    color: #777184;
+}
+
+.word-actions {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
     margin-top: 20px;
 }
 
-footer {
-    margin-top: 40px;
-    padding: 25px;
-    color: #777;
+.word-actions button {
+    border: none;
+
+    padding: 11px 17px;
+
+    border-radius: 10px;
+
+    background: #eeeaff;
+
+    color: #49379a;
+
+    font-weight: 600;
 }
+
+.word-actions button:hover {
+    background: #ded7ff;
+}
+
+
+/* =========================================================
+   11. PRACTICE
+   ========================================================= */
+
+.practice-options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.practice-card {
+    font-size: 28px;
+}
+
+.practice-card strong {
+    font-size: 17px;
+}
+
+.practice-area {
+    min-height: 200px;
+
+    margin-top: 25px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+}
+
+.practice-area h3 {
+    margin-bottom: 8px;
+
+    color: #5b3fc4;
+}
+
+
+/* =========================================================
+   12. STORIES
+   ========================================================= */
+
+.story-filters {
+    margin-bottom: 25px;
+}
+
+.story-filters select {
+    max-width: 300px;
+}
+
+.stories-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.story-card {
+    padding: 22px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+
+    transition: transform 0.2s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-4px);
+}
+
+.story-card h3 {
+    margin-bottom: 8px;
+
+    color: #5b3fc4;
+}
+
+.story-card small {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 8px;
+
+    background: #eeeaff;
+
+    color: #5b3fc4;
+}
+
+.story-reader {
+    margin-top: 30px;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow: 0 5px 25px rgba(50, 40, 80, 0.08);
+}
+
+.story-reader h2 {
+    color: #5b3fc4;
+
+    margin-bottom: 5px;
+}
+
+.story-reader > p {
+    color: #777184;
+
+    margin-bottom: 20px;
+}
+
+#storyContent {
+    white-space: pre-line;
+
+    font-size: 17px;
+
+    margin-bottom: 25px;
+}
+
+.story-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+}
+
+.story-actions button {
+    border: none;
+
+    padding: 11px 16px;
+
+    border-radius: 10px;
+
+    background: #eeeaff;
+
+    color: #49379a;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   13. LISTENING
+   ========================================================= */
+
+.listening-card,
+.speaking-card,
+.writing-card {
+    padding: 40px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 22px;
+
+    box-shadow: 0 5px 25px rgba(50, 40, 80, 0.08);
+}
+
+.audio-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+.listening-question {
+    display: flex;
+
+    max-width: 600px;
+
+    margin: 25px auto 0;
+
+    gap: 10px;
+}
+
+.listening-question input {
+    flex: 1;
+}
+
+.listening-question button {
+    border: none;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: #eeeaff;
+
+    color: #49379a;
+
+    font-weight: 600;
+}
+
+#listeningResult,
+#speakingResult,
+#writingResult {
+    margin-top: 20px;
+
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   14. SPEAKING
+   ========================================================= */
+
+.speaking-card h3 {
+    font-size: 28px;
+
+    color: #5b3fc4;
+
+    margin: 15px 0;
+}
+
+
+/* =========================================================
+   15. WRITING
+   ========================================================= */
+
+.writing-card h3 {
+    font-size: 34px;
+
+    color: #5b3fc4;
+
+    margin: 15px 0;
+}
+
+.writing-card input {
+    width: min(600px, 100%);
+
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   16. SAVED WORDS
+   ========================================================= */
+
+#savedWordsList {
+    min-height: 100px;
+
+    padding: 25px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+}
+
+
+/* =========================================================
+   17. PROGRESS
+   ========================================================= */
+
+.progress-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+.progress-stat {
+    padding: 25px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+}
+
+.progress-stat span {
+    display: block;
+
+    font-size: 35px;
+
+    margin-bottom: 5px;
+}
+
+.progress-stat strong {
+    display: block;
+
+    font-size: 28px;
+
+    color: #5b3fc4;
+}
+
+.progress-stat small {
+    color: #777184;
+}
+
+.level-progress {
+    margin-top: 25px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow: 0 5px 20px rgba(50, 40, 80, 0.07);
+}
+
+.level-progress h3 {
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+
+    height: 15px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #e8e4f2;
+}
+
+.progress-fill {
+    width: 0%;
+
+    height: 100%;
+
+    border-radius: 20px;
+
+    background: #6c4ce4;
+
+    transition: width 0.4s ease;
+}
+
+
+/* =========================================================
+   18. FOOTER
+   ========================================================= */
+
+.site-footer {
+    margin-top: 50px;
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    background: #29243a;
+
+    color: #ddd8ea;
+}
+
+.footer-logo {
+    font-size: 24px;
+
+    font-weight: 800;
+
+    margin-bottom: 8px;
+
+    color: white;
+}
+
+.site-footer p {
+    margin: 5px 0;
+}
+
+
+/* =========================================================
+   19. DARK MODE
+   ========================================================= */
+
+body.dark-mode {
+    background: #17151f;
+
+    color: #eeeaf8;
+}
+
+body.dark-mode .site-header {
+    background: rgba(30, 27, 40, 0.95);
+
+    border-bottom-color: #353044;
+}
+
+body.dark-mode .logo {
+    color: #b7a5ff;
+}
+
+body.dark-mode .main-navigation a {
+    color: #c4bdd4;
+}
+
+body.dark-mode .main-navigation a:hover {
+    color: #b7a5ff;
+}
+
+body.dark-mode .icon-button {
+    background: #312b40;
+}
+
+body.dark-mode .hero-section {
+    background: linear-gradient(
+        135deg,
+        #252131,
+        #1d1a27
+    );
+}
+
+body.dark-mode .hero-content h1,
+body.dark-mode .hero-content h2 {
+    color: #f0edfa;
+}
+
+body.dark-mode .hero-content p,
+body.dark-mode .section-heading p,
+body.dark-mode .dashboard-card small,
+body.dark-mode .feature-card small,
+body.dark-mode .practice-card small {
+    color: #b5aec4;
+}
+
+body.dark-mode .section-icon {
+    background: #302941;
+}
+
+body.dark-mode .language-selector,
+body.dark-mode .dashboard-card,
+body.dark-mode .feature-card,
+body.dark-mode .practice-card,
+body.dark-mode .practice-area,
+body.dark-mode .word-card,
+body.dark-mode .word-practice-card,
+body.dark-mode .story-card,
+body.dark-mode .story-reader,
+body.dark-mode .listening-card,
+body.dark-mode .speaking-card,
+body.dark-mode .writing-card,
+body.dark-mode .progress-stat,
+body.dark-mode .level-progress,
+body.dark-mode #savedWordsList {
+    background: #24202f;
+
+    color: #eeeaf8;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-mode select,
+body.dark-mode input {
+    background: #302b3b;
+
+    color: #f0edfa;
+
+    border-color: #49415a;
+}
+
+body.dark-mode .dashboard-card strong,
+body.dark-mode .word-practice-card h3,
+body.dark-mode .story-card h3,
+body.dark-mode .story-reader h2,
+body.dark-mode .speaking-card h3,
+body.dark-mode .writing-card h3,
+body.dark-mode .progress-stat strong,
+body.dark-mode .practice-area h3 {
+    color: #c1b2ff;
+}
+
+body.dark-mode .word-practice-card p:not(.word-label) {
+    color: #b5aec4;
+}
+
+body.dark-mode .word-actions button,
+body.dark-mode .story-actions button,
+body.dark-mode .listening-question button {
+    background: #352e49;
+
+    color: #d2c7ff;
+}
+
+body.dark-mode .word-actions button:hover,
+body.dark-mode .story-actions button:hover,
+body.dark-mode .listening-question button:hover {
+    background: #423858;
+}
+
+body.dark-mode .progress-bar {
+    background: #3a3447;
+}
+
+
+/* =========================================================
+   20. RESPONSIVE DESIGN — TABLETS
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .main-navigation {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+    }
+
+    .hero-section {
+        margin-left: 20px;
+        margin-right: 20px;
+
+        padding: 55px 35px;
+    }
+
+    .hero-hamster {
+        font-size: 110px;
+    }
+
+    .dashboard-section {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .practice-options {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .stories-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .vocabulary-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .progress-container {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   21. RESPONSIVE DESIGN — MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    .site-header {
+        padding: 12px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .main-navigation {
+        gap: 10px;
+    }
+
+    .main-navigation a {
+        font-size: 12px;
+    }
+
+    .icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .hero-section {
+        flex-direction: column;
+
+        text-align: center;
+
+        margin: 20px 12px 0;
+
+        padding: 45px 20px;
+
+        border-radius: 22px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-hamster {
+        font-size: 90px;
+
+        min-width: auto;
+    }
+
+    .language-section,
+    .learning-section,
+    .learning-page {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .dashboard-section {
+        grid-template-columns: 1fr;
+
+        padding: 0 15px;
+    }
+
+    .feature-grid,
+    .practice-options,
+    .stories-grid,
+    .vocabulary-grid,
+    .progress-container {
+        grid-template-columns: 1fr;
+    }
+
+    .vocabulary-tools {
+        grid-template-columns: 1fr;
+    }
+
+    .word-practice-card {
+        padding: 25px 15px;
+    }
+
+    .word-practice-card h3 {
+        font-size: 32px;
+    }
+
+    .listening-card,
+    .speaking-card,
+    .writing-card,
+    .story-reader {
+        padding: 25px 18px;
+    }
+
+    .listening-question {
+        flex-direction: column;
+    }
+
+    .writing-card h3,
+    .speaking-card h3 {
+        font-size: 25px;
+    }
+
+    .site-footer {
+        padding: 30px 15px;
+    }
+}
+
+
+/* =========================================================
+   22. ACCESSIBILITY
+   ========================================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #8c76ed;
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   23. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        transition-duration: 0.01ms !important;
+    }
+    }
