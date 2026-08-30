@@ -3,7 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Lingo Hamster - Learn languages through vocabulary, stories, listening, speaking and writing.">
 
     <title>Lingo Hamster 🐹</title>
 
@@ -12,131 +17,1077 @@
 
 <body>
 
-    <header>
+    <!-- =========================
+         HEADER
+    ========================== -->
+
+    <header class="site-header">
 
         <div class="logo">
-            🐹 Lingo Hamster
+            🐹 <span>Lingo Hamster</span>
         </div>
 
-        <p class="subtitle">
-            Learn languages. Have fun. Grow your vocabulary.
-        </p>
+        <nav class="main-navigation">
+
+            <a href="#home">Home</a>
+            <a href="#vocabulary">Vocabulary</a>
+            <a href="#practice">Practice</a>
+            <a href="#stories">Stories</a>
+            <a href="#listening">Listening</a>
+            <a href="#speaking">Speaking</a>
+            <a href="#writing">Writing</a>
+
+        </nav>
+
+        <button id="darkModeButton"
+                class="icon-button"
+                aria-label="Toggle dark mode">
+            🌙
+        </button>
 
     </header>
 
 
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
     <main>
 
-        <!-- Language Selection -->
 
-        <section class="language-box">
+        <!-- =========================
+             HOME
+        ========================== -->
 
-            <h2>🌍 Choose Your Language</h2>
+        <section id="home" class="hero-section">
 
-            <select id="language">
+            <div class="hero-content">
 
-                <option value="english">🇬🇧 English</option>
-                <option value="spanish">🇪🇸 Spanish</option>
-                <option value="french">🇫🇷 French</option>
-                <option value="italian">🇮🇹 Italian</option>
-                <option value="chinese">🇨🇳 Chinese</option>
-                <option value="korean">🇰🇷 Korean</option>
-                <option value="japanese">🇯🇵 Japanese</option>
-                <option value="german">🇩🇪 German</option>
-                <option value="arabic">🇸🇦 Arabic</option>
-                <option value="russian">🇷🇺 Russian</option>
-                <option value="urdu">🇵🇰 Urdu</option>
+                <p class="welcome-text">
+                    Welcome to
+                </p>
 
-            </select>
+                <h1>
+                    Lingo Hamster 🐹
+                </h1>
 
+                <h2>
+                    Learn languages. Have fun. Grow your vocabulary.
+                </h2>
 
-            <button class="start-button">
-                🚀 Start Learning
-            </button>
+                <p>
+                    Learn new words, read stories,
+                    practice listening, speaking and writing,
+                    and earn XP while you learn.
+                </p>
 
-        </section>
+                <button id="startLearningButton"
+                        class="primary-button">
+                    🚀 Start Learning
+                </button>
 
-
-        <!-- Learning Features -->
-
-        <h2>📚 Start Learning</h2>
-
-        <section class="features">
-
-            <div class="feature">
-                📚
-                <br>
-                Vocabulary
             </div>
 
-            <div class="feature">
-                🧠
-                <br>
-                Practice
-            </div>
-
-            <div class="feature">
-                📖
-                <br>
-                Stories
-            </div>
-
-            <div class="feature">
-                🎧
-                <br>
-                Listening
-            </div>
-
-            <div class="feature">
-                🎤
-                <br>
-                Speaking
-            </div>
-
-            <div class="feature">
-                ✍️
-                <br>
-                Writing
+            <div class="hero-hamster">
+                🐹
             </div>
 
         </section>
 
 
-        <!-- Progress -->
+        <!-- =========================
+             LANGUAGE SELECTOR
+        ========================== -->
 
-        <section class="progress">
+        <section class="language-section">
 
-            <h2>🏆 Your Progress</h2>
+            <div class="section-heading">
 
-            <p>⭐ XP: <strong>0</strong></p>
+                <span class="section-icon">🌍</span>
 
-            <p>🔥 Streak: <strong>0 days</strong></p>
+                <div>
+                    <h2>Choose Your Language</h2>
 
-            <p>📚 Words learned: <strong>0</strong></p>
+                    <p>
+                        Select a language to begin your journey.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="language-selector">
+
+                <label for="language">
+                    Learning language
+                </label>
+
+                <select id="language">
+
+                    <option value="english">
+                        🇬🇧 English
+                    </option>
+
+                    <option value="spanish">
+                        🇪🇸 Spanish
+                    </option>
+
+                    <option value="french">
+                        🇫🇷 French
+                    </option>
+
+                    <option value="italian">
+                        🇮🇹 Italian
+                    </option>
+
+                    <option value="chinese">
+                        🇨🇳 Chinese
+                    </option>
+
+                    <option value="korean">
+                        🇰🇷 Korean
+                    </option>
+
+                    <option value="japanese">
+                        🇯🇵 Japanese
+                    </option>
+
+                    <option value="german">
+                        🇩🇪 German
+                    </option>
+
+                    <option value="arabic">
+                        🇸🇦 Arabic
+                    </option>
+
+                    <option value="russian">
+                        🇷🇺 Russian
+                    </option>
+
+                    <option value="urdu">
+                        🇵🇰 Urdu
+                    </option>
+
+                </select>
+
+            </div>
 
         </section>
 
 
-        <!-- Hamster -->
+        <!-- =========================
+             DASHBOARD
+        ========================== -->
 
-        <div class="hamster">
-            🐹
-        </div>
+        <section class="dashboard-section">
 
-        <p>
-            Your language-learning adventure starts here!
-        </p>
+            <div class="dashboard-card">
+
+                <span>⭐</span>
+
+                <div>
+                    <strong id="xpDisplay">0</strong>
+                    <small>XP</small>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>🔥</span>
+
+                <div>
+                    <strong id="streakDisplay">0</strong>
+                    <small>Day Streak</small>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>📚</span>
+
+                <div>
+                    <strong id="wordsLearnedDisplay">0</strong>
+                    <small>Words Learned</small>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-card">
+
+                <span>🏆</span>
+
+                <div>
+                    <strong id="levelDisplay">1</strong>
+                    <small>Level</small>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             LEARNING FEATURES
+        ========================== -->
+
+        <section class="learning-section">
+
+            <div class="section-heading">
+
+                <span class="section-icon">📚</span>
+
+                <div>
+
+                    <h2>Start Learning</h2>
+
+                    <p>
+                        Choose how you want to practice.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <button class="feature-card"
+                        id="vocabularyButton">
+
+                    <span class="feature-icon">
+                        📚
+                    </span>
+
+                    <strong>
+                        Vocabulary
+                    </strong>
+
+                    <small>
+                        Learn new words
+                    </small>
+
+                </button>
+
+
+                <button class="feature-card"
+                        id="practiceButton">
+
+                    <span class="feature-icon">
+                        🧠
+                    </span>
+
+                    <strong>
+                        Practice
+                    </strong>
+
+                    <small>
+                        Test your knowledge
+                    </small>
+
+                </button>
+
+
+                <button class="feature-card"
+                        id="storiesButton">
+
+                    <span class="feature-icon">
+                        📖
+                    </span>
+
+                    <strong>
+                        Stories
+                    </strong>
+
+                    <small>
+                        Read and learn
+                    </small>
+
+                </button>
+
+
+                <button class="feature-card"
+                        id="listeningButton">
+
+                    <span class="feature-icon">
+                        🎧
+                    </span>
+
+                    <strong>
+                        Listening
+                    </strong>
+
+                    <small>
+                        Train your ears
+                    </small>
+
+                </button>
+
+
+                <button class="feature-card"
+                        id="speakingButton">
+
+                    <span class="feature-icon">
+                        🎤
+                    </span>
+
+                    <strong>
+                        Speaking
+                    </strong>
+
+                    <small>
+                        Practice pronunciation
+                    </small>
+
+                </button>
+
+
+                <button class="feature-card"
+                        id="writingButton">
+
+                    <span class="feature-icon">
+                        ✍️
+                    </span>
+
+                    <strong>
+                        Writing
+                    </strong>
+
+                    <small>
+                        Improve your writing
+                    </small>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             VOCABULARY
+        ========================== -->
+
+        <section id="vocabulary"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    📚
+                </span>
+
+                <div>
+
+                    <h2>Vocabulary</h2>
+
+                    <p>
+                        Discover words in your chosen language.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="vocabulary-tools">
+
+                <input type="search"
+                       id="vocabularySearch"
+                       placeholder="🔎 Search vocabulary...">
+
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                    <option value="greetings">
+                        Greetings
+                    </option>
+
+                    <option value="family">
+                        Family
+                    </option>
+
+                    <option value="food">
+                        Food
+                    </option>
+
+                    <option value="travel">
+                        Travel
+                    </option>
+
+                    <option value="school">
+                        School
+                    </option>
+
+                    <option value="work">
+                        Work
+                    </option>
+
+                    <option value="animals">
+                        Animals
+                    </option>
+
+                    <option value="nature">
+                        Nature
+                    </option>
+
+                    <option value="numbers">
+                        Numbers
+                    </option>
+
+                    <option value="verbs">
+                        Verbs
+                    </option>
+
+                    <option value="adjectives">
+                        Adjectives
+                    </option>
+
+                    <option value="daily-life">
+                        Daily Life
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="vocabularyList"
+                 class="vocabulary-grid">
+
+                <!-- Vocabulary will be generated by JavaScript -->
+
+            </div>
+
+
+            <div class="word-practice-card">
+
+                <p class="word-label">
+                    WORD
+                </p>
+
+                <h3 id="currentWord">
+                    Hello
+                </h3>
+
+                <p id="currentTranslation">
+                    Hola
+                </p>
+
+
+                <div class="word-actions">
+
+                    <button id="listenWordButton">
+                        🔊 Listen
+                    </button>
+
+                    <button id="saveWordButton">
+                        ⭐ Save
+                    </button>
+
+                    <button id="nextWordButton">
+                        ➡️ Next
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRACTICE
+        ========================== -->
+
+        <section id="practice"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🧠
+                </span>
+
+                <div>
+
+                    <h2>Practice</h2>
+
+                    <p>
+                        Test what you've learned.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="practice-options">
+
+
+                <button class="practice-card"
+                        id="flashcardButton">
+
+                    🃏
+
+                    <strong>
+                        Flashcards
+                    </strong>
+
+                    <small>
+                        Review vocabulary
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card"
+                        id="quizButton">
+
+                    ❓
+
+                    <strong>
+                        Vocabulary Quiz
+                    </strong>
+
+                    <small>
+                        Choose the correct answer
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card"
+                        id="fillBlankButton">
+
+                    ✏️
+
+                    <strong>
+                        Fill in the Blank
+                    </strong>
+
+                    <small>
+                        Complete sentences
+                    </small>
+
+                </button>
+
+
+                <button class="practice-card"
+                        id="matchingButton">
+
+                    🔗
+
+                    <strong>
+                        Word Matching
+                    </strong>
+
+                    <small>
+                        Match words and meanings
+                    </small>
+
+                </button>
+
+
+            </div>
+
+
+            <div id="practiceArea"
+                 class="practice-area">
+
+                <h3>
+                    Ready to practice?
+                </h3>
+
+                <p>
+                    Choose an activity above.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             STORIES
+        ========================== -->
+
+        <section id="stories"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    📖
+                </span>
+
+                <div>
+
+                    <h2>Stories</h2>
+
+                    <p>
+                        Learn languages through interesting stories.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="story-filters">
+
+                <select id="storyLevelFilter">
+
+                    <option value="all">
+                        All Levels
+                    </option>
+
+                    <option value="beginner">
+                        Beginner
+                    </option>
+
+                    <option value="intermediate">
+                        Intermediate
+                    </option>
+
+                    <option value="advanced">
+                        Advanced
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div id="storiesList"
+                 class="stories-grid">
+
+                <!-- 50+ stories will be loaded here -->
+
+            </div>
+
+
+            <article id="storyReader"
+                     class="story-reader">
+
+                <h2 id="storyTitle">
+                    Choose a story
+                </h2>
+
+                <p id="storyLevel">
+                    Level
+                </p>
+
+                <div id="storyContent">
+
+                    Select a story to begin reading.
+
+                </div>
+
+
+                <div class="story-actions">
+
+                    <button id="listenStoryButton">
+                        🔊 Listen
+                    </button>
+
+                    <button id="storyVocabularyButton">
+                        📚 Story Vocabulary
+                    </button>
+
+                    <button id="storyQuizButton">
+                        🧠 Story Quiz
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             LISTENING
+        ========================== -->
+
+        <section id="listening"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🎧
+                </span>
+
+                <div>
+
+                    <h2>Listening Practice</h2>
+
+                    <p>
+                        Listen carefully and understand the language.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="listening-card">
+
+                <div class="audio-icon">
+                    🎧
+                </div>
+
+                <p>
+                    Listen to the sentence.
+                </p>
+
+                <button id="playListeningButton"
+                        class="primary-button">
+
+                    ▶️ Play Audio
+
+                </button>
+
+
+                <div class="listening-question">
+
+                    <input type="text"
+                           id="listeningAnswer"
+                           placeholder="What did you hear?">
+
+                    <button id="checkListeningButton">
+                        ✅ Check
+                    </button>
+
+                </div>
+
+
+                <p id="listeningResult"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SPEAKING
+        ========================== -->
+
+        <section id="speaking"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🎤
+                </span>
+
+                <div>
+
+                    <h2>Speaking Practice</h2>
+
+                    <p>
+                        Speak and improve your pronunciation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="speaking-card">
+
+                <p>
+                    Read this sentence aloud:
+                </p>
+
+                <h3 id="speakingSentence">
+                    Hello, how are you?
+                </h3>
+
+
+                <button id="startSpeakingButton"
+                        class="primary-button">
+
+                    🎤 Start Speaking
+
+                </button>
+
+
+                <p id="speakingResult"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             WRITING
+        ========================== -->
+
+        <section id="writing"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ✍️
+                </span>
+
+                <div>
+
+                    <h2>Writing Practice</h2>
+
+                    <p>
+                        Practice spelling, sentences and translation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="writing-card">
+
+                <p>
+                    Translate this word:
+                </p>
+
+                <h3 id="writingWord">
+                    Hello
+                </h3>
+
+
+                <input type="text"
+                       id="writingAnswer"
+                       placeholder="Write your answer...">
+
+
+                <button id="checkWritingButton"
+                        class="primary-button">
+
+                    ✅ Check Answer
+
+                </button>
+
+
+                <p id="writingResult"></p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             SAVED WORDS
+        ========================== -->
+
+        <section id="saved"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    ⭐
+                </span>
+
+                <div>
+
+                    <h2>Saved Words</h2>
+
+                    <p>
+                        Review vocabulary you've saved.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="savedWordsList"
+                 class="vocabulary-grid">
+
+                <p>
+                    You haven't saved any words yet.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PROGRESS
+        ========================== -->
+
+        <section id="progress"
+                 class="learning-page">
+
+
+            <div class="section-heading">
+
+                <span class="section-icon">
+                    🏆
+                </span>
+
+                <div>
+
+                    <h2>Your Progress</h2>
+
+                    <p>
+                        Track your language-learning journey.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="progress-container">
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        ⭐
+                    </span>
+
+                    <strong id="progressXP">
+                        0
+                    </strong>
+
+                    <small>
+                        Total XP
+                    </small>
+
+                </div>
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        📚
+                    </span>
+
+                    <strong id="progressWords">
+                        0
+                    </strong>
+
+                    <small>
+                        Words Learned
+                    </small>
+
+                </div>
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        📖
+                    </span>
+
+                    <strong id="progressStories">
+                        0
+                    </strong>
+
+                    <small>
+                        Stories Completed
+                    </small>
+
+                </div>
+
+
+                <div class="progress-stat">
+
+                    <span>
+                        🔥
+                    </span>
+
+                    <strong id="progressStreak">
+                        0
+                    </strong>
+
+                    <small>
+                        Day Streak
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="level-progress">
+
+                <h3>
+                    Level <span id="currentLevel">1</span>
+                </h3>
+
+                <div class="progress-bar">
+
+                    <div id="xpProgressBar"
+                         class="progress-fill">
+                    </div>
+
+                </div>
+
+                <p>
+                    <span id="levelXP">0</span>
+                    / 100 XP
+                </p>
+
+            </div>
+
+        </section>
+
 
     </main>
 
 
-    <footer>
+    <!-- =========================
+         FOOTER
+    ========================== -->
 
-        <p>© 2026 Lingo Hamster 🐹</p>
+    <footer class="site-footer">
+
+        <div class="footer-logo">
+            🐹 Lingo Hamster
+        </div>
+
+        <p>
+            Learn languages. Have fun. Grow your vocabulary.
+        </p>
+
+        <p>
+            © 2026 Lingo Hamster
+        </p>
 
     </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script src="script.js"></script>
 
 </body>
 
-</html>
+                    </html>
